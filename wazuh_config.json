@@ -1,0 +1,22 @@
+{
+  "wazuh_cloud": {
+    "endpoint": "https://cloud.wazuh.com/api",
+    "api_key": "your_wazuh_api_key",
+    "rules": [
+      {
+        "id": "1001",
+        "description": "Detect unauthorized file changes",
+        "pattern": "file_modified"
+      },
+      {
+        "id": "1002",
+        "description": "Detect suspicious user activity",
+        "pattern": "failed_login_count > 5"
+      }
+    ],
+    "alerts": {
+      "slack_webhook": "https://hooks.slack.com/services/your/webhook",
+      "email": "alerts@internee.pk"
+    }
+  }
+}
